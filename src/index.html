@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./output.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50 h-full"> 
+    <header id="navbar" class="fixed top-0 left-0 w-full z-50 transition-all duration-300">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-between py-4">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 bg-white rounded-full border border-orange-500 flex items-center justify-center">
+                        <img src="img/Logo Soto.Jpg" alt="Logo Soto" class="w-6 h-6 object-cover">
+                    </div>
+                    <div>
+                        <h1 class="text-xl font-bold text-slate-800 leading-none">Warung Sobet</h1>
+                        <p class="text-xs text-slate-500">Soto & Nasi Nusantara</p>
+                    </div>
+                </div>
+
+                <nav class="hidden md:flex space-x-8 font-medium">
+                    <a href="#" class="text-orange-500">Home</a>
+                    <a href="#" class="text-slate-700 hover:text-orange-500">Menu</a>
+                    <a href="#" class="text-slate-700 hover:text-orange-500">Checkout</a>
+                    <a href="#" class="text-slate-700 hover:text-orange-500">Pesanan</a>
+                    <a href="#" class="text-slate-700 hover:text-orange-500">Tentang</a>
+                    <a href="#" class="text-slate-700 hover:text-orange-500">Kontak</a>
+                </nav>
+
+                <div class="flex items-center gap-4">
+                    <button class="bg-orange-600 text-white px-5 py-2 rounded-full flex items-center gap-2 font-semibold">
+                        Keranjang <span class="bg-white text-orange-600 rounded-full px-2 py-0.5 text-sm">0</span>
+                    </button>
+                    
+                    <button id="hamburger" class="md:hidden flex flex-col justify-center items-center w-8 h-8 group">
+                        <span class="hamburger-line origin-top-left"></span>
+                        <span class="hamburger-line"></span>
+                        <span class="hamburger-line origin-bottom-left"></span>
+                    </button>
+                </div>
+            </div>
+
+            <nav id="nav-menu" class="hidden absolute left-0 top-full w-full bg-white/95 backdrop-blur-md shadow-lg py-5 px-4 md:hidden">
+                <ul class="flex flex-col space-y-4 font-medium">
+                    <li><a href="#" class="block text-orange-500">Home</a></li>
+                    <li><a href="#" class="block text-slate-700">Menu</a></li>
+                    <li><a href="#" class="block text-slate-700">Checkout</a></li>
+                    <li><a href="#" class="block text-slate-700">Pesanan</a></li>
+                    <li><a href="#" class="block text-slate-700">Tentang</a></li>
+                    <li><a href="#" class="block text-slate-700">Kontak</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
