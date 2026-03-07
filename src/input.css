@@ -2,17 +2,20 @@
 
 @layer components {
     .hamburger-line {
-        @apply w-full h-0.5 my-1 bg-slate-800 block transition duration-300 ease-in-out;
+        /* Base garis */
+        @apply h-0.5 w-6 bg-slate-800 block transition-all duration-300 ease-in-out;
     }
 
-  /* Animasi Hamburger ke X */
-  .hamburger-active span:nth-child(1) {
-  @apply rotate-45 translate-x-1;
-  }
-  .hamburger-active span:nth-child(2) {
-  @apply scale-0 opacity-0;
-  }
-  .hamburger-active span:nth-child(3) {
-  @apply -rotate-45 translate-x-1;
-  }
+    /* Animasi ke X: Nilai translate-y-2 adalah yang paling pas untuk w-6 */
+    .hamburger-active span:nth-child(1) {
+        @apply rotate-45 translate-y-2;
+    }
+    
+    .hamburger-active span:nth-child(2) {
+        @apply opacity-0 scale-0;
+    }
+    
+    .hamburger-active span:nth-child(3) {
+        @apply -rotate-45 -translate-y-2;
+    }
 }

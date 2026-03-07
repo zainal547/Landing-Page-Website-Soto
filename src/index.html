@@ -1,60 +1,58 @@
 <!doctype html>
-<html>
+<html lang="id">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="./output.css" rel="stylesheet">
   <title>Warung Soto Betawi "Pamulang"</title>
 </head>
-<body class="bg-slate-50 text-slate-900"> 
-    <!-- Start Navbar /-->
-    <header class="sticky top-0 z-50 bg-white/80 backdrop-blur border-b border-slate-200">
+<body class="bg-slate-50 text-slate-900 antialiased">
+
+  <header class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-200 transition-all duration-300">
     <nav class="max-w-6xl mx-auto flex items-center justify-between px-4 py-3">
-    <a href="index.html" class="flex items-center gap-2">
-      <img src="img/Logo Soto.Jpg" alt="Logo Warung Sobet" class="h-10 w-10 rounded-full object-cover border border-primary-500" />
-      <div>
-        <p class="text-lg font-semibold tracking-tight">Warung Sobet</p>
-        <p class="text-xs text-slate-500">Soto & Nasi Nusantara</p>
-      </div>
-    </a>
-
-    <div class="hidden md:flex items-center gap-6 text-sm font-medium">
-      <a href="index.html" class="text-primary-600">Home</a>
-      <a href="menu.html" class="hover:text-primary-600 transition">Menu</a>
-      <a href="checkout.html" class="hover:text-primary-600 transition">Checkout</a>
-      <a href="orders.html" class="hover:text-primary-600 transition">Pesanan</a>
-      <a href="about.html" class="hover:text-primary-600 transition">Tentang</a>
-      <a href="contact.html" class="hover:text-primary-600 transition">Kontak</a>
-    </div>
-
-    <div class="flex items-center gap-3">
-      <a href="checkout.html" class="inline-flex items-center gap-2 rounded-full bg-orange-600 px-4 py-2 text-white text-sm font-semibold shadow-sm hover:bg-orange-700 transition">
-        <span class="hidden sm:inline">Keranjang</span>
-        <span id="cart-count" class="inline-flex h-6 w-6 items-center justify-center rounded-full bg-white text-orange-700 text-xs font-bold">0</span>
+      <a href="index.html" class="flex items-center gap-2">
+        <img src="img/Logo Soto.Jpg" alt="Logo" class="h-10 w-10 rounded-full object-cover border border-orange-500">
+        <div>
+          <p class="text-lg font-semibold tracking-tight">Warung Sobet</p>
+          <p class="text-xs text-slate-500">Soto & Nasi Nusantara</p>
+        </div>
       </a>
 
-      <button id="hamburger" class="md:hidden flex flex-col justify-center items-center w-8 h-8 focus:outline-none">
-        <span class="hamburger-line w-6 h-0.5 bg-slate-800 transition-all duration-300 origin-top-left"></span>
-        <span class="hamburger-line w-6 h-0.5 bg-slate-800 my-1.5 transition-all duration-300"></span>
-        <span class="hamburger-line w-6 h-0.5 bg-slate-800 transition-all duration-300 origin-bottom-left"></span>
-      </button>
-    </div>
+      <div class="hidden md:flex items-center gap-8 text-sm font-medium">
+        <a href="index.html" class="text-orange-600">Home</a>
+        <a href="menu.html" class="text-slate-600 hover:text-orange-600 transition-colors">Menu</a>
+        <a href="checkout.html" class="text-slate-600 hover:text-orange-600 transition-colors">Checkout</a>
+        <a href="orders.html" class="text-slate-600 hover:text-orange-600 transition-colors">Pesanan</a>
+        <a href="about.html" class="text-slate-600 hover:text-orange-600 transition-colors">Tentang</a>
+        <a href="contact.html" class="text-slate-600 hover:text-orange-600 transition-colors">Kontak</a>
+      </div>
+
+      <div class="flex items-center gap-4">
+        <a href="checkout.html" class="inline-flex items-center gap-3 rounded-full bg-orange-600 pl-5 pr-1.5 py-1.5 text-white text-sm font-semibold shadow-lg shadow-orange-200 hover:bg-orange-700 transition-all">
+          <span>Keranjang</span>
+          <span class="inline-flex h-7 w-7 items-center justify-center rounded-full bg-white text-orange-600 text-xs font-bold">0</span>
+        </a>
+
+        <button id="hamburger" class="md:hidden flex flex-col justify-center items-center w-8 h-8 focus:outline-none group">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line my-1.5"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
     </nav>
 
-    <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-200">
-    <div class="flex flex-col p-4 space-y-4 text-sm font-medium">
-      <a href="index.html" class="text-primary-600">Home</a>
-      <a href="menu.html" class="text-slate-600">Menu</a>
-      <a href="checkout.html" class="text-slate-600">Checkout</a>
-      <a href="orders.html" class="text-slate-600">Pesanan</a>
-      <a href="about.html" class="text-slate-600">Tentang</a>
-      <a href="contact.html" class="text-slate-600">Kontak</a>
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-100 shadow-xl origin-top transform transition-all duration-300 opacity-0 -translate-y-4">
+      <div class="flex flex-col p-6 space-y-4 text-sm font-semibold">
+        <a href="index.html" class="text-orange-600">Home</a>
+        <a href="menu.html" class="text-slate-800 hover:text-orange-600 transition">Menu</a>
+        <a href="checkout.html" class="text-slate-800 hover:text-orange-600 transition">Checkout</a>
+        <a href="orders.html" class="text-slate-800 hover:text-orange-600 transition">Pesanan</a>
+        <a href="about.html" class="text-slate-800 hover:text-orange-600 transition">Tentang</a>
+        <a href="contact.html" class="text-slate-800 hover:text-orange-600 transition">Kontak</a>
+      </div>
     </div>
-    </div>
-    </header>
-    <!-- End Navbar /-->
+  </header>
 
-    
-    <script src="js/script.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>
