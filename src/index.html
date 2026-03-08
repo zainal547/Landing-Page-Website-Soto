@@ -6,19 +6,19 @@
   <link href="./output.css" rel="stylesheet">
   <title>Warung Soto Betawi "Pamulang"</title>
 </head>
-<body class="bg-slate-50 text-slate-900 antialiased">
-
-  <header class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-200 transition-all duration-300">
+<body class="bg-slate-50 text-slate-900">
+  <!-- Start Navbar -->
+    <header class="sticky top-0 z-30 bg-white/80 backdrop-blur border-b border-slate-200">
     <nav class="max-w-6xl mx-auto flex items-center justify-between px-4 py-3">
       <a href="index.html" class="flex items-center gap-2">
         <img src="img/Logo Soto.Jpg" alt="Logo" class="h-10 w-10 rounded-full object-cover border border-orange-500">
         <div>
-          <p class="text-lg font-semibold tracking-tight">Warung Sobet</p>
-          <p class="text-xs text-slate-500">Soto & Nasi Nusantara</p>
+          <p class="text-lg font-semibold tracking-tight">Sobet Sudi Mampir "Pamulang"</p>
+          <p class="text-xs text-slate-500">Soto Sapi & Ayam</p>
         </div>
       </a>
 
-      <div class="hidden md:flex items-center gap-8 text-sm font-medium">
+      <div class="hidden md:flex items-center gap-6 text-sm font-medium">
         <a href="index.html" class="text-orange-600">Home</a>
         <a href="menu.html" class="text-slate-600 hover:text-orange-600 transition-colors">Menu</a>
         <a href="checkout.html" class="text-slate-600 hover:text-orange-600 transition-colors">Checkout</a>
@@ -28,9 +28,9 @@
       </div>
 
       <div class="flex items-center gap-4">
-        <a href="checkout.html" class="inline-flex items-center gap-3 rounded-full bg-orange-600 pl-5 pr-1.5 py-1.5 text-white text-sm font-semibold shadow-lg shadow-orange-200 hover:bg-orange-700 transition-all">
+        <a href="checkout.html" class="inline-flex items-center gap-2 rounded-full bg-orange-600 px-4 py-2 text-white text-sm font-semibold shadow-sm hover:bg-orange-700">
           <span>Keranjang</span>
-          <span class="inline-flex h-7 w-7 items-center justify-center rounded-full bg-white text-orange-600 text-xs font-bold">0</span>
+          <span id="cart-count" class="inline-flex h-6 w-6 items-center justify-center rounded-full bg-white text-orange-700 text-xs font-bold">0</span>
         </a>
 
         <button id="hamburger" class="md:hidden flex flex-col justify-center items-center w-8 h-8 focus:outline-none group">
@@ -51,7 +51,187 @@
         <a href="contact.html" class="text-slate-800 hover:text-orange-600 transition">Kontak</a>
       </div>
     </div>
-  </header>
+    </header>
+  <!-- End Navbar -->
+
+  <!-- Start Hero Section -->
+    <main class="max-w-6xl mx-auto px-4 py-10 space-y-16">
+      <!-- Hero Section -->
+      <section class="grid gap-10 md:grid-cols-2 items-center">
+        <div class="space-y-6">
+          <p class="inline-flex items-center gap-2 rounded-full bg-orange-50 px-3 py-1 text-xs font-semibold text-orange-700">
+            Autentik • Hangat • Nikmat
+          </p>
+          <h1 class="text-3xl md:text-5xl font-extrabold tracking-tighter text-slate-900 leading-[1.1] md:leading-[1.1]">
+              Nikmati Hangatnya<br />
+            <span class="text-orange-600">Soto & Nasi Spesial</span><br />
+              Setiap Hari.
+          </h1>
+          <p class="text-slate-600 text-sm md:text-base max-w-xl">
+            Warung Sobet menyajikan soto, nasi, dan hidangan nusantara pilihan 
+            dengan cita rasa rumah yang hangat. 
+            Bisa Pesan online, sambil santai di rumah dan rasa yang tetap istimewa.
+          </p>
+          <div class="flex flex-wrap gap-3">
+            <a
+              href="menu.html"
+              class="inline-flex items-center justify-center rounded-full bg-orange-600 px-5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-orange-700"
+            >
+              Lihat Menu
+            </a>
+            <a
+              href="checkout.html"
+              class="inline-flex items-center justify-center rounded-full border border-slate-300 px-5 py-2.5 text-sm font-semibold text-slate-700 hover:border-orange-500 hover:text-orange-600"
+            >
+              Lihat Keranjang
+            </a>
+          </div>
+          <div class="flex items-center gap-6 text-xs text-slate-500">
+            <div>
+              <p class="font-semibold text-slate-700">Buka Setiap Hari</p>
+              <p>09.00 - 22.00 WIB</p>
+            </div>
+            <div>
+              <p class="font-semibold text-slate-700">Pengantaran Cepat</p>
+              <p>Area sekitar Warung Sobet</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid gap-4">
+          <div class="rounded-3xl overflow-hidden shadow-lg border border-slate-100">
+            <img
+              src="img/Final Soto.png"
+              alt="Semangkuk soto hangat"
+              class="h-64 w-full object-cover"
+            />
+          </div>
+          <div class="grid grid-cols-2 gap-4">
+            <div class="rounded-2xl overflow-hidden shadow border border-slate-100">
+              <img
+                src="img/Final Foto Nasi.png"
+                alt="Menu nasi spesial"
+                class="h-32 w-full object-cover"
+              />
+            </div>
+            <div class="rounded-2xl bg-white border border-dashed border-orange-200 flex items-center justify-center p-4">
+              <div class="text-center space-y-1">
+                <p class="text-xs font-semibold text-orange-700">Promo Hari Ini</p>
+                <p class="text-lg font-bold text-slate-900">Diskon 10%</p>
+                <p class="text-[11px] text-slate-500">Minimal pembelian Rp50.000</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Featured Menu Section -->
+      <section class="space-y-6">
+        <div class="flex items-center justify-between gap-4">
+          <div>
+            <h2 class="text-xl md:text-2xl font-bold tracking-tight text-slate-900">
+              Menu Rekomendasi Toko
+            </h2>
+            <p class="text-sm text-slate-500">
+              Pilihan terbaik pelanggan, langsung tambahkan ke keranjang.
+            </p>
+          </div>
+          <a href="menu.html" class="hidden md:inline-flex text-xs font-semibold text-orange-600 hover:text-orange-700">
+            Lihat semua menu →
+          </a>
+        </div>
+
+        <div class="grid gap-5 md:grid-cols-3">
+          <!-- Product Card 1 -->
+          <article
+            class="bg-white rounded-2xl shadow-sm border border-slate-100 flex flex-col overflow-hidden"
+          >
+            <div class="h-32 w-full bg-linear-to-tr from-orange-50 to-orange-100 flex items-center justify-center text-sm text-orange-700 font-semibold">
+              Soto Ayam Hangat
+            </div>
+            <div class="flex-1 p-4 space-y-3">
+              <h3 class="text-sm font-semibold text-slate-900">Soto Ayam Kampung</h3>
+              <p class="text-xs text-slate-500">
+                Kuah bening gurih, suwiran ayam kampung, telur, dan sambal khas.
+              </p>
+              <p class="text-orange-600 font-bold text-sm">
+                Rp18.000
+              </p>
+              <button
+                class="js-add-to-cart mt-1 inline-flex w-full items-center justify-center rounded-full bg-orange-600 px-3 py-1.5 text-xs font-semibold text-white hover:bg-orange-700"
+                data-product-id="soto-ayam"
+                data-name="Soto Ayam Kampung"
+                data-price="18000"
+              >
+                Tambah ke Keranjang
+              </button>
+            </div>
+          </article>
+
+          <!-- Product Card 2 -->
+          <article
+            class="bg-white rounded-2xl shadow-sm border border-slate-100 flex flex-col overflow-hidden"
+          >
+            <div class="h-32 w-full bg-linear-to-tr from-amber-50 to-yellow-50 flex items-center justify-center text-sm text-amber-700 font-semibold">
+              Nasi Komplit
+            </div>
+            <div class="flex-1 p-4 space-y-3">
+              <h3 class="text-sm font-semibold text-slate-900">Nasi Ayam Krispi</h3>
+              <p class="text-xs text-slate-500">
+                Nasi putih, ayam krispi, sambal, lalapan, dan kremesan renyah.
+              </p>
+              <p class="text-orange-600 font-bold text-sm">
+                Rp22.000
+              </p>
+              <button
+                class="js-add-to-cart mt-1 inline-flex w-full items-center justify-center rounded-full bg-orange-600 px-3 py-1.5 text-xs font-semibold text-white hover:bg-orange-700"
+                data-product-id="nasi-ayam-krispi"
+                data-name="Nasi Ayam Krispi"
+                data-price="22000"
+              >
+                Tambah ke Keranjang
+              </button>
+            </div>
+          </article>
+
+          <!-- Product Card 3 -->
+          <article
+            class="bg-white rounded-2xl shadow-sm border border-slate-100 flex flex-col overflow-hidden"
+          >
+            <div class="h-32 w-full bg-linear-to-tr from-emerald-50 to-teal-50 flex items-center justify-center text-sm text-emerald-700 font-semibold">
+              Paket Hemat
+            </div>
+            <div class="flex-1 p-4 space-y-3">
+              <h3 class="text-sm font-semibold text-slate-900">Paket Soto + Es Teh</h3>
+              <p class="text-xs text-slate-500">
+                Satu porsi soto pilihan + es teh manis segar, pas untuk siang hari.
+              </p>
+              <p class="text-orange-600 font-bold text-sm">
+                Rp23.000
+              </p>
+              <button
+                class="js-add-to-cart mt-1 inline-flex w-full items-center justify-center rounded-full bg-orange-600 px-3 py-1.5 text-xs font-semibold text-white hover:bg-orange-700"
+                data-product-id="paket-soto-esteh"
+                data-name="Paket Soto + Es Teh"
+                data-price="23000"
+              >
+                Tambah ke Keranjang
+              </button>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+  <!-- End Hero Section -->
+
+  <!-- Start Footer -->
+    <footer class="border-t border-slate-200 bg-white">
+      <div class="max-w-6xl mx-auto px-4 py-4 flex flex-col md:flex-row items-center justify-between gap-2 text-[11px] text-slate-500">
+        <p>© <span id="year"></span> Sobet Sudi Mampir "Pamulang". All rights reserved.</p>
+        <p>Dibuat Oleh Zainal Mutaqin.</p>
+      </div>
+    </footer>
+  <!-- End Footer -->
 
   <script src="js/script.js"></script>
 </body>
