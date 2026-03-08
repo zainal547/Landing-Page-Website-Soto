@@ -1,17 +1,13 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./*.html", "./src/**/*.{html,js}"],
+  content: ["./public/**/*.{html,js}"], // Pastikan jalurnya benar
   theme: {
     extend: {
       colors: {
         primary: {
-          50: "#fef4e6",
-          100: "#fde7c2",
-          500: "#f97316",
-          600: "#ea580c",
-          700: "#c2410c",
-        },
-      },
+          600: '#ea580c', // Pastikan warna orange Anda terdaftar
+        }
+      }
     },
   },
   plugins: [],

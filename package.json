@@ -1,4 +1,17 @@
 {
+  "name": "landing-page-website-soto",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "npx tailwindcss -i ./src/css/input.css -o ./public/css/output.css --watch",
+    "build": "npx tailwindcss -i ./src/css/input.css -o ./public/css/output.css --minify",
+    "start": "node src/js/server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
   "dependencies": {
     "@tailwindcss/cli": "^4.2.1",
     "tailwindcss": "^4.2.1"
