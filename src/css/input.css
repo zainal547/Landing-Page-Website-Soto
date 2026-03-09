@@ -18,4 +18,7 @@
     .hamburger-active span:nth-child(3) {
         @apply -rotate-45 -translate-y-2;
     }
+    #menu-grid article {
+        transition: all 0.3s ease-in-out;
+    }
 }

@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="css/output.css" rel="stylesheet">
+  <title>Warung Soto Betawi "Pamulang"</title>
+</head>
+<body class="bg-slate-50 text-slate-900">
+  <!-- Start Navbar -->
+    <header class="sticky top-0 z-30 bg-white/80 backdrop-blur border-b border-slate-200">
+    <nav class="max-w-6xl mx-auto flex items-center justify-between px-4 py-3">
+      <a href="index.html" class="flex items-center gap-2">
+        <img src="img/Logo Soto.Jpg" alt="Logo" class="h-10 w-10 rounded-full object-cover border border-orange-500">
+        <div>
+          <p class="text-lg font-semibold tracking-tight">Sobet Sudi Mampir "Pamulang"</p>
+          <p class="text-xs text-slate-500">Soto Sapi & Ayam</p>
+        </div>
+      </a>
+
+      <div class="hidden md:flex items-center gap-6 text-sm font-medium">
+        <a href="index.html" class="text-slate-600 hover:text-orange-600 transition-colors">Home</a>
+        <a href="menu.html" class="text-orange-600">Menu</a>
+        <a href="checkout.html" class="text-slate-600 hover:text-orange-600 transition-colors">Checkout</a>
+        <a href="orders.html" class="text-slate-600 hover:text-orange-600 transition-colors">Pesanan</a>
+        <a href="about.html" class="text-slate-600 hover:text-orange-600 transition-colors">Tentang</a>
+        <a href="contact.html" class="text-slate-600 hover:text-orange-600 transition-colors">Kontak</a>
+      </div>
+
+      <div class="flex items-center gap-4">
+        <a href="checkout.html" class="inline-flex items-center gap-2 rounded-full bg-orange-600 px-4 py-2 text-white text-sm font-semibold shadow-sm hover:bg-orange-700">
+          <span>Keranjang</span>
+          <span id="cart-count" class="inline-flex h-6 w-6 items-center justify-center rounded-full bg-white text-orange-700 text-xs font-bold">0</span>
+        </a>
+
+        <button id="hamburger" class="md:hidden flex flex-col justify-center items-center w-8 h-8 focus:outline-none group">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line my-1.5"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </nav>
+
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-100 shadow-xl origin-top transform transition-all duration-300 opacity-0 -translate-y-4">
+      <div class="flex flex-col p-6 space-y-4 text-sm font-semibold">
+        <a href="index.html" class="text-slate-800 hover:text-orange-600 transition">Home</a>
+        <a href="menu.html" class="text-orange-600">Menu</a>
+        <a href="checkout.html" class="text-slate-800 hover:text-orange-600 transition">Checkout</a>
+        <a href="orders.html" class="text-slate-800 hover:text-orange-600 transition">Pesanan</a>
+        <a href="about.html" class="text-slate-800 hover:text-orange-600 transition">Tentang</a>
+        <a href="contact.html" class="text-slate-800 hover:text-orange-600 transition">Kontak</a>
+      </div>
+    </div>
+    </header>
+  <!-- End Navbar -->
+
+  <!-- Start Menu Section -->
+    <main class="max-w-6xl mx-auto px-4 py-10 space-y-10">
+      <header class="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+        <div>
+          <h1 class="text-2xl md:text-3xl font-bold tracking-tight text-slate-900">
+            Menu & Katalog Produk
+          </h1>
+          <p class="text-sm text-slate-500 max-w-xl">
+            Pilih berbagai menu soto, nasi, dan paketan. Klik tombol
+            <span class="font-semibold text-slate-700">"Tambah ke Keranjang"</span> untuk mulai memesan.
+          </p>
+        </div>
+        <div class="flex items-center gap-2 text-xs text-slate-500">
+          <span class="inline-flex h-2 w-2 rounded-full bg-emerald-500"></span>
+          <span>Online & siap menerima pesanan</span>
+        </div>
+      </header>
+
+    <!-- Category Filters (non-functional UI hint) -->
+    <div class="flex flex-wrap gap-2 text-xs" id="category-filters">
+        <button class="filter-btn rounded-full bg-orange-600 text-white px-4 py-1.5 font-semibold" data-category="semua">
+            Semua
+        </button>
+        <button class="filter-btn rounded-full border border-slate-300 px-4 py-1.5 text-slate-600 hover:border-orange-500 transition-colors" data-category="soto">
+            Soto
+        </button>
+        <button class="filter-btn rounded-full border border-slate-300 px-4 py-1.5 text-slate-600 hover:border-orange-500 transition-colors" data-category="nasi">
+            Nasi
+        </button>
+        <button class="filter-btn rounded-full border border-slate-300 px-4 py-1.5 text-slate-600 hover:border-orange-500 transition-colors" data-category="paket">
+            Paketan
+        </button>
+        <button class="filter-btn rounded-full border border-slate-300 px-4 py-1.5 text-slate-600 hover:border-orange-500 transition-colors" data-category="minuman">
+            Minuman
+        </button>
+    </div>
+
+      <!-- Product Grid -->
+      <section class="grid gap-5 md:grid-cols-3" id="menu-grid">
+        <!-- Soto Ayam -->
+        <article
+          class="bg-white rounded-2xl shadow-sm border border-slate-100 flex flex-col overflow-hidden" data-product-category="soto"
+        >
+          <div class="h-32 w-full bg-linear-to-tr from-orange-50 to-orange-50 flex items-center justify-center text-sm text-orange-700 font-semibold">
+            Soto Ayam Kampung
+          </div>
+          <div class="flex-1 p-4 space-y-3">
+            <p class="text-[11px] uppercase tracking-wide text-orange-600 font-semibold">
+              Soto
+            </p>
+            <h2 class="text-sm font-semibold text-slate-900">Soto Ayam Kampung</h2>
+            <p class="text-xs text-slate-500">
+              Kuah bening gurih, ayam kampung, telur, perkedel, sambal, dan jeruk nipis.
+            </p>
+            <p class="text-orange-600 font-bold text-sm">
+              Rp18.000
+            </p>
+            <button
+              class="js-add-to-cart mt-1 inline-flex w-full items-center justify-center rounded-full bg-orange-600 px-3 py-1.5 text-xs font-semibold text-white hover:bg-orange-700"
+              data-product-id="soto-ayam"
+              data-name="Soto Ayam Kampung"
+              data-price="18000"
+            >
+              Tambah ke Keranjang
+            </button>
+          </div>
+        </article>
+
+        <!-- Soto Daging -->
+        <article
+          class="bg-white rounded-2xl shadow-sm border border-slate-100 flex flex-col overflow-hidden" data-product-category="soto"
+        >
+          <div class="h-32 w-full bg-linear-to-tr from-orange-50 to-amber-50 flex items-center justify-center text-sm text-amber-700 font-semibold">
+            Soto Daging Spesial
+          </div>
+          <div class="flex-1 p-4 space-y-3">
+            <p class="text-[11px] uppercase tracking-wide text-orange-600 font-semibold">
+              Soto
+            </p>
+            <h2 class="text-sm font-semibold text-slate-900">Soto Daging Sapi</h2>
+            <p class="text-xs text-slate-500">
+              Irisan daging sapi empuk, kuah rempah kaya rasa, lengkap dengan pelengkap.
+            </p>
+            <p class="text-orange-600 font-bold text-sm">
+              Rp24.000
+            </p>
+            <button
+              class="js-add-to-cart mt-1 inline-flex w-full items-center justify-center rounded-full bg-orange-600 px-3 py-1.5 text-xs font-semibold text-white hover:bg-orange-700"
+              data-product-id="soto-daging"
+              data-name="Soto Daging Sapi"
+              data-price="24000"
+            >
+              Tambah ke Keranjang
+            </button>
+          </div>
+        </article>
+
+        <!-- Nasi Ayam Krispi -->
+        <article
+          class="bg-white rounded-2xl shadow-sm border border-slate-100 flex flex-col overflow-hidden" data-product-category="nasi"
+        >
+          <div class="h-32 w-full bg-linear-to-tr from-amber-50 to-yellow-50 flex items-center justify-center text-sm text-amber-700 font-semibold">
+            Nasi Ayam Krispi
+          </div>
+          <div class="flex-1 p-4 space-y-3">
+            <p class="text-[11px] uppercase tracking-wide text-orange-600 font-semibold">
+              Nasi
+            </p>
+            <h2 class="text-sm font-semibold text-slate-900">Nasi Ayam Krispi</h2>
+            <p class="text-xs text-slate-500">
+              Nasi hangat, ayam krispi, sambal, lalapan, dan kremesan.
+            </p>
+            <p class="text-orange-600 font-bold text-sm">
+              Rp22.000
+            </p>
+            <button
+              class="js-add-to-cart mt-1 inline-flex w-full items-center justify-center rounded-full bg-orange-600 px-3 py-1.5 text-xs font-semibold text-white hover:bg-orange-700"
+              data-product-id="nasi-ayam-krispi"
+              data-name="Nasi Ayam Krispi"
+              data-price="22000"
+            >
+              Tambah ke Keranjang
+            </button>
+          </div>
+        </article>
+
+        <!-- Nasi Rames -->
+        <article
+          class="bg-white rounded-2xl shadow-sm border border-slate-100 flex flex-col overflow-hidden" data-product-category="nasi"
+        >
+          <div class="h-32 w-full bg-linear-to-tr from-yellow-50 to-lime-50 flex items-center justify-center text-sm text-lime-700 font-semibold">
+            Nasi Rames Harian
+          </div>
+          <div class="flex-1 p-4 space-y-3">
+            <p class="text-[11px] uppercase tracking-wide text-orange-600 font-semibold">
+              Nasi
+            </p>
+            <h2 class="text-sm font-semibold text-slate-900">Nasi Rames Harian</h2>
+            <p class="text-xs text-slate-500">
+              Lauk berganti setiap hari, selalu ada sayur dan lauk utama.
+            </p>
+            <p class="text-orange-600 font-bold text-sm">
+              Rp20.000
+            </p>
+            <button
+              class="js-add-to-cart mt-1 inline-flex w-full items-center justify-center rounded-full bg-orange-600 px-3 py-1.5 text-xs font-semibold text-white hover:bg-orange-700"
+              data-product-id="nasi-rames"
+              data-name="Nasi Rames Harian"
+              data-price="20000"
+            >
+              Tambah ke Keranjang
+            </button>
+          </div>
+        </article>
+
+        <!-- Paket Soto + Es Teh -->
+        <article
+          class="bg-white rounded-2xl shadow-sm border border-slate-100 flex flex-col overflow-hidden" data-product-category="paket"
+        >
+          <div class="h-32 w-full bg-linear-to-tr from-emerald-50 to-teal-50 flex items-center justify-center text-sm text-emerald-700 font-semibold">
+            Paket Soto + Es Teh
+          </div>
+          <div class="flex-1 p-4 space-y-3">
+            <p class="text-[11px] uppercase tracking-wide text-orange-600 font-semibold">
+              Paket Hemat
+            </p>
+            <h2 class="text-sm font-semibold text-slate-900">Paket Soto + Es Teh</h2>
+            <p class="text-xs text-slate-500">
+              Satu porsi soto ayam/daging + es teh manis segar.
+            </p>
+            <p class="text-orange-600 font-bold text-sm">
+              Rp23.000
+            </p>
+            <button
+              class="js-add-to-cart mt-1 inline-flex w-full items-center justify-center rounded-full bg-orange-600 px-3 py-1.5 text-xs font-semibold text-white hover:bg-orange-700"
+              data-product-id="paket-soto-esteh"
+              data-name="Paket Soto + Es Teh"
+              data-price="23000"
+            >
+              Tambah ke Keranjang
+            </button>
+          </div>
+        </article>
+
+        <!-- Es Teh Manis -->
+        <article
+          class="bg-white rounded-2xl shadow-sm border border-slate-100 flex flex-col overflow-hidden" data-product-category="minuman"
+        >
+          <div class="h-32 w-full bg-linear-to-tr from-sky-50 to-blue-50 flex items-center justify-center text-sm text-sky-700 font-semibold">
+            Es Teh Manis
+          </div>
+          <div class="flex-1 p-4 space-y-3">
+            <p class="text-[11px] uppercase tracking-wide text-orange-600 font-semibold">
+              Minuman
+            </p>
+            <h2 class="text-sm font-semibold text-slate-900">Es Teh Manis</h2>
+            <p class="text-xs text-slate-500">
+              Teh manis dingin penyegar tenggorokan, cocok untuk semua menu.
+            </p>
+            <p class="text-orange-600 font-bold text-sm">
+              Rp5.000
+            </p>
+            <button
+              class="js-add-to-cart mt-1 inline-flex w-full items-center justify-center rounded-full bg-orange-600 px-3 py-1.5 text-xs font-semibold text-white hover:bg-orange-700"
+              data-product-id="es-teh-manis"
+              data-name="Es Teh Manis"
+              data-price="5000"
+            >
+              Tambah ke Keranjang
+            </button>
+          </div>
+        </article>
+      </section>
+    </main>
+  <!-- End Menu Section -->
+
+  <!-- Start Footer -->
+    <footer class="border-t border-slate-200 bg-white">
+      <div class="max-w-6xl mx-auto px-4 py-4 flex flex-col md:flex-row items-center justify-between gap-2 text-[11px] text-slate-500">
+        <p>© <span id="year"></span> Sobet Sudi Mampir "Pamulang". All rights reserved.</p>
+        <p>Dibuat Oleh Zainal Mutaqin.</p>
+      </div>
+    </footer>
+  <!-- End Footer -->
+
+  <script src="js/script.js"></script>
+</body>
+</html>
