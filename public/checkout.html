@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="css/output.css" rel="stylesheet">
+  <title>Warung Soto Betawi "Pamulang"</title>
+</head>
+<body class="bg-slate-50 text-slate-900">
+
+  <!-- Start Navbar -->
+    <header class="sticky top-0 z-30 bg-white/80 backdrop-blur border-b border-slate-200">
+    <nav class="max-w-6xl mx-auto flex items-center justify-between px-4 py-3">
+      <a href="index.html" class="flex items-center gap-2">
+        <img src="img/Logo Soto.Jpg" alt="Logo" class="h-10 w-10 rounded-full object-cover border border-orange-500">
+        <div>
+          <p class="text-lg font-semibold tracking-tight">Sobet Sudi Mampir "Pamulang"</p>
+          <p class="text-xs text-slate-500">Soto Sapi & Ayam</p>
+        </div>
+      </a>
+
+      <div class="hidden md:flex items-center gap-6 text-sm font-medium">
+        <a href="index.html" class="text-slate-600 hover:text-orange-600 transition-colors">Home</a>
+        <a href="menu.html" class="text-slate-600 hover:text-orange-600 transition-colors">Menu</a>
+        <a href="checkout.html" class="text-orange-600">Checkout</a>
+        <a href="orders.html" class="text-slate-600 hover:text-orange-600 transition-colors">Pesanan</a>
+        <a href="about.html" class="text-slate-600 hover:text-orange-600 transition-colors">Tentang</a>
+        <a href="contact.html" class="text-slate-600 hover:text-orange-600 transition-colors">Kontak</a>
+      </div>
+
+      <div class="flex items-center gap-4">
+        <a href="checkout.html" class="inline-flex items-center gap-2 rounded-full bg-orange-600 px-4 py-2 text-white text-sm font-semibold shadow-sm hover:bg-orange-700">
+          <span>Keranjang</span>
+          <span id="cart-count" class="inline-flex h-6 w-6 items-center justify-center rounded-full bg-white text-orange-700 text-xs font-bold">0</span>
+        </a>
+
+        <button id="hamburger" class="md:hidden flex flex-col justify-center items-center w-8 h-8 focus:outline-none group">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line my-1.5"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </nav>
+
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-100 shadow-xl origin-top transform transition-all duration-300 opacity-0 -translate-y-4">
+      <div class="flex flex-col p-6 space-y-4 text-sm font-semibold">
+        <a href="index.html" class="text-slate-800 hover:text-orange-600 transition">Home</a>
+        <a href="menu.html" class="text-slate-600 hover:text-orange-600 transition-colors">Menu</a>
+        <a href="checkout.html" class="text-orange-600">Checkout</a>
+        <a href="orders.html" class="text-slate-800 hover:text-orange-600 transition">Pesanan</a>
+        <a href="about.html" class="text-slate-800 hover:text-orange-600 transition">Tentang</a>
+        <a href="contact.html" class="text-slate-800 hover:text-orange-600 transition">Kontak</a>
+      </div>
+    </div>
+    </header>
+  <!-- End Navbar -->
+
+  <!-- Start Checkout Section -->
+    <section class="max-w-6xl mx-auto px-4 py-12">
+      <h1 class="text-3xl font-bold mb-6">Checkout</h1>
+      <p class="text-slate-600 mb-8">Review pesanan Anda sebelum melakukan pembayaran.</p>
+
+      <div id="checkout-items" class="space-y-4">
+        <!-- Item checkout akan ditambahkan di sini melalui JavaScript -->
+      </div>
+
+      <div class="mt-8 flex justify-end items-center gap-4">
+        <p class="text-xl font-semibold">Total: <span id="checkout-total">Rp 0</span></p>
+        <button id="checkout-button" class="inline-flex items-center gap-2 rounded-full bg-orange-600 px-6 py-3 text-white text-sm font-semibold shadow-sm hover:bg-orange-700">
+          Checkout
+        </button>
+      </div>
+    </section>
+  <!-- End Checkout Section -->
+
+  <!-- Start Footer -->
+    <footer class="border-t border-slate-200 bg-white">
+      <div class="max-w-6xl mx-auto px-4 py-4 flex flex-col md:flex-row items-center justify-between gap-2 text-[11px] text-slate-500">
+        <p>© <span id="year"></span> Sobet Sudi Mampir "Pamulang". All rights reserved.</p>
+        <p>Dibuat Oleh Zainal Mutaqin.</p>
+      </div>
+    </footer>
+  <!-- End Footer -->
+
+  <script src="js/script.js"></script>
+</body>
+</html>
