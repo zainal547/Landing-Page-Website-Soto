@@ -29,9 +29,9 @@
       </div>
 
       <div class="flex items-center gap-4">
-        <a href="checkout.html" class="inline-flex items-center gap-2 rounded-full bg-orange-600 px-4 py-2 text-white text-sm font-semibold shadow-sm hover:bg-orange-700">
+        <a href="checkout.html" class="flex items-center gap-2 bg-orange-600 text-white px-4 py-2 rounded-full">
           <span>Keranjang</span>
-          <span id="cart-count" class="inline-flex h-6 w-6 items-center justify-center rounded-full bg-white text-orange-700 text-xs font-bold">0</span>
+          <span id="cart-count" class="bg-white text-orange-600 px-2 py-0.5 rounded-full text-xs font-bold">0</span>
         </a>
 
         <button id="hamburger" class="md:hidden flex flex-col justify-center items-center w-8 h-8 focus:outline-none group">
@@ -60,14 +60,14 @@
       <h1 class="text-3xl font-bold mb-6">Checkout</h1>
       <p class="text-slate-600 mb-8">Review pesanan Anda sebelum melakukan pembayaran.</p>
 
-      <div id="checkout-items" class="space-y-4">
-        <!-- Item checkout akan ditambahkan di sini melalui JavaScript -->
+      <div id="checkout-list" class="space-y-4 mb-6">
       </div>
 
+      
       <div class="mt-8 flex justify-end items-center gap-4">
-        <p class="text-xl font-semibold">Total: <span id="checkout-total">Rp 0</span></p>
+        <p class="text-xl font-semibold">Total: <span id="external-grand-total">Rp 0</span></p>
         <button id="checkout-button" class="inline-flex items-center gap-2 rounded-full bg-orange-600 px-6 py-3 text-white text-sm font-semibold shadow-sm hover:bg-orange-700">
-          Checkout
+          <a href="payment.html" class="text-white">Checkout</a>
         </button>
       </div>
     </section>
